@@ -1,13 +1,14 @@
 LISTA = [];
-
 function AdicionarNaLista() {
   let numeroparadd = document.getElementById("escolha").value;
   if (numeroparadd != "") {
     LISTA.push(numeroparadd);
+    document.getElementById("escolha").value = "";
   } else {
     alert("Digite um numero!");
   }
   document.getElementById("itensnalista").innerHTML = LISTA;
+  document.getElementById("escolha").value = "";
 }
 
 function Jogar() {
